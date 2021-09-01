@@ -1,0 +1,16 @@
+<div class="col-md-6 form-group">
+    <tr>
+        <th>
+            <label for="nomeInput">Nome</label>
+            <input type="text" class="input-style form-control" id="nomeInput" #nomeInput placeholder="Nome do curso">
+        </th>
+        <th>
+            <label for="nomeInput">Carga horaria</label>
+            <input type="text" class="input-style form-control" id="cargaHorariaInput" #cargaHorariaInput placeholder="Carga horaria">
+        </th>
+    </tr>
+</div>
+<div class="row">
+    <button class="btn btn-primary btn-block"
+        (click)="adicionar(nomeInput.value, cargaHorariaInput.value)">Cadastrar</button>
+</div>

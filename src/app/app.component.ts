@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'paooEx';
+  cursos = [
+    {
+      nome: "Análise e Desenvolvimento de Sistemas",
+      cargaHoraria: 200
+    },
+  ];
+
+  onAdicionarCurso(curso: curso) {
+    this.cursos = [curso, ...this.cursos];
+  }
 }
+
+export type curso = {
+  nome: string,
+  cargaHoraria: number
+};
